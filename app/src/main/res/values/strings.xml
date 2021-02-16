@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">WB-11 Onboarding</string>
+    
+    <string name="onboarding_pages_number_text">%1$d/%2$d</string>
+    
+    <string name="onboarding_btn_start_text">Start</string>
+    <string name="onboarding_btn_agree_text">I agree</string>
+    <string name="onboarding_btn_skip_text">Skip</string>
+    <string name="onboarding_btn_invite_text">Invite</string>
+    <string name="onboarding_btn_finish_text">Start browsing</string>
+
+    <string name="onboarding_start_title"><![CDATA[<font color="#363d47">Browse The Web</font><br> <font color=#0080ff>While You Save Animals</font>]]></string>
+    <string name="onboarding_start_text"><![CDATA[<p>Up to a million species are  facing extinction - some within the next decade - unless we take  immediate action to save them.</p>
+    <p>The idea behind our browser is simple - we want to give everyone opportunity to save animals. 100% of profits from advertising, search and partner programs will be transparently donated to animal funds all over the world.</p>
+    <p>Our team puts lots of efforts to make Wild Browser fast, secure and friendly for every day use.</p>]]></string>
+
+    <string name="onboarding_set_as_default_title"><![CDATA[<font color="#363d47">Make A Wild Browser</font><br> <font color=#0080ff>Your Default Browser</font>]]></string>
+    <string name="onboarding_set_as_default_text">The more you use our browser, the better we can help animals. Make Wild browser your default browser to protect the species right now.</string>
+
+    <string name="onboarding_invite_title"><![CDATA[<font color="#363d47">Invite Friends And Make</font><br> <font color=#0080ff>A Difference For Wildlife</font>]]></string>
+    <string name="onboarding_invite_text">Wild Browser is committed to helping animal funds in most effective ways possible. We don\'t want to spend money on marketing but instead we kindly ask you to help our growth by inviting a friend or sharing  information about us.</string>
+
+    <string name="onboarding_support_title"><![CDATA[<font color="#363d47">Choose Who </font><font color=#0080ff>You<br> Would Like to Support</font>]]></string>
+    <string name="onboarding_support_text">By default all profits are donated equally among animal support funds.  However, if you prefer you can decide to whom to address help:</string>
+</resources>
