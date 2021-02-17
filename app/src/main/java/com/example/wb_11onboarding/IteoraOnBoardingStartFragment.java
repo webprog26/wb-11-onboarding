@@ -2,7 +2,6 @@ package com.example.wb_11onboarding;
 
 import android.text.Html;
 import android.view.View;
-import android.widget.TextView;
 
 public class IteoraOnBoardingStartFragment extends IteoraAbstractOnBoardingFragment {
 
@@ -19,7 +18,8 @@ public class IteoraOnBoardingStartFragment extends IteoraAbstractOnBoardingFragm
 
     @Override
     protected void onViewCreatedInternal(View view) {
-        ((TextView) view.findViewById(R.id.tv_start_title)).setText(Html.fromHtml(getString(R.string.onboarding_start_title)));
-        ((TextView) view.findViewById(R.id.tv_start_text)).setText(Html.fromHtml(getString(R.string.onboarding_start_text)));
+        final IteoraFirstRunView iteoraFirstRunView = (IteoraFirstRunView) view.findViewById(R.id.iteora_first_run_view);
+        iteoraFirstRunView.setTitle(Html.fromHtml(getString(R.string.onboarding_start_title)));
+        iteoraFirstRunView.setText(Html.fromHtml(getString(R.string.onboarding_start_text)));
     }
 }

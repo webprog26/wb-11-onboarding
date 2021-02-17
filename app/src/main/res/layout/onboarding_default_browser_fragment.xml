@@ -33,33 +33,12 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <com.example.wb_11onboarding.IteoraFirstRunView
+        android:id="@+id/iteora_first_run_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_above="@id/controls_container">
-
-        <ImageView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/onboarding_set_as_default"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:id="@+id/tv_set_as_default_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            style="@style/OnboardingTitleText" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/onboarding_set_as_default_text"
-            style="@style/OnboardingText"/>
-
-
-    </LinearLayout>
+        android:layout_above="@id/controls_container"
+        android:src="@drawable/onboarding_set_as_default"
+        android:text="@string/onboarding_set_as_default_text"/>
 
 </RelativeLayout>

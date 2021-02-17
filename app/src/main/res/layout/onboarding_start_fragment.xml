@@ -28,33 +28,11 @@
         android:layout_above="@id/controls_container"
         android:scrollbars="none">
 
-        <LinearLayout
+        <com.example.wb_11onboarding.IteoraFirstRunView
+            android:id="@+id/iteora_first_run_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="12dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/onboarding_start" />
-
-            <TextView
-                android:id="@+id/tv_start_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="18dp"
-                style="@style/OnboardingTitleText"/>
-
-            <TextView
-                android:id="@+id/tv_start_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/OnboardingText" />
-
-        </LinearLayout>
+            android:src="@drawable/onboarding_start"/>
 
     </ScrollView>
 
