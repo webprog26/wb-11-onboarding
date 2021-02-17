@@ -5,35 +5,26 @@ import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class IteoraFirstRunView extends LinearLayout {
+public class IteoraFirstRunView extends IteoraAbstractFirstRunView {
 
     private TextView tvTitle;
     private TextView tvText;
 
-    private ImageView ivImage;
-
     public IteoraFirstRunView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs);
     }
 
-    private void init(final Context context, @Nullable final AttributeSet attrs) {
-        setOrientation(VERTICAL);
-
-        final View rootView = LayoutInflater.from(context).inflate(R.layout.iteora_first_run_view, this, true);
-
+    @Override
+    protected void onPostInit(View rootView, @Nullable AttributeSet attrs) {
         this.tvTitle = rootView.findViewById(R.id.tv_title);
         this.tvText = rootView.findViewById(R.id.tv_text);
-        this.ivImage = rootView.findViewById(R.id.iv_image);
 
         if (attrs != null) {
-            final TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.IteoraFirstRunView, 0, 0);
+            final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.IteoraFirstRunView, 0, 0);
 
             try {
                 final int titleResId = ta.getResourceId(R.styleable.IteoraFirstRunView_title, 0);
@@ -51,13 +42,18 @@ public class IteoraFirstRunView extends LinearLayout {
                 final int imageDrawableResId = ta.getResourceId(R.styleable.IteoraFirstRunView_android_src, 0);
 
                 if (imageDrawableResId != 0) {
-                    ivImage.setImageDrawable(ContextCompat.getDrawable(context, imageDrawableResId));
+                    ((ImageView) rootView.findViewById(R.id.iv_image)).setImageDrawable(ContextCompat.getDrawable(getContext(), imageDrawableResId));
                 }
 
             } finally {
                 ta.recycle();
             }
         }
+    }
+
+    @Override
+    protected int getLayoutResId() {
+        return R.layout.iteora_first_run_view;
     }
 
     public void setTitle(final CharSequence title) {

@@ -5,29 +5,25 @@ import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 
-public class IteoraFirstRunSelectableView extends LinearLayout {
+public class IteoraFirstRunSelectableView extends IteoraAbstractFirstRunView {
 
     private IteoraSelectableFirstRunImageView primarySelectableImageView;
     private IteoraSelectableFirstRunImageView secondarySelectableImageView;
 
     public IteoraFirstRunSelectableView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs);
     }
 
-    private void init(final Context context, @Nullable final AttributeSet attrs) {
-        setOrientation(VERTICAL);
+    @Override
+    protected void onPostInit(View rootView, @Nullable AttributeSet attrs) {
         setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-        final View rootView = LayoutInflater.from(context).inflate(R.layout.iteora_first_run_selectable_view, this, true);
         this.primarySelectableImageView = (IteoraSelectableFirstRunImageView) rootView.findViewById(R.id.primary_selectable_image_view);
         this.secondarySelectableImageView = (IteoraSelectableFirstRunImageView) rootView.findViewById(R.id.secondary_selectable_image_view);
 
         if (attrs != null) {
-            final TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.IteoraFirstRunSelectableView, 0, 0);
+            final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.IteoraFirstRunSelectableView, 0, 0);
 
             try {
                 final int primaryImageResId = ta.getResourceId(R.styleable.IteoraFirstRunSelectableView_primaryImageSrc, 0);
@@ -45,6 +41,11 @@ public class IteoraFirstRunSelectableView extends LinearLayout {
                 ta.recycle();
             }
         }
+    }
+
+    @Override
+    protected int getLayoutResId() {
+        return R.layout.iteora_first_run_selectable_view;
     }
 
     int getPrimaryActionId() {
