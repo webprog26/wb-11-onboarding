@@ -1,40 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="22dp"
-    android:paddingTop="48dp"
-    android:paddingEnd="22dp"
-    android:paddingBottom="22dp">
+    android:paddingStart="@dimen/first_run_slide_padding_start"
+    android:paddingTop="@dimen/first_run_slide_padding_top"
+    android:paddingEnd="@dimen/first_run_slide_padding_end"
+    android:paddingBottom="@dimen/first_run_slide_padding_bottom">
 
-    <LinearLayout
+    <com.example.wb_11onboarding.IteoraFirstRunControllerAdvanced
         android:id="@+id/controls_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:gravity="bottom"
-        android:layout_marginBottom="16dp">
-
-        <Button
-            android:id="@+id/btn_agree"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/onboarding_btn_agree_text"
-            style="@style/OnboardingActionButton"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp"/>
-
-        <Button
-            android:id="@+id/btn_skip"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="@string/onboarding_btn_skip_text"
-            style="@style/OnboardingSkipButton"/>
-
-    </LinearLayout>
+        android:layout_marginBottom="@dimen/first_run_slide_controls_margin_bottom"
+        app:advancedActionButtonText="@string/onboarding_btn_agree_text"
+        app:skipButtonText="@string/onboarding_btn_skip_text" />
 
     <com.example.wb_11onboarding.IteoraFirstRunView
         android:id="@+id/iteora_first_run_view"
@@ -42,6 +23,6 @@
         android:layout_height="match_parent"
         android:layout_above="@id/controls_container"
         android:src="@drawable/onboarding_set_as_default"
-        android:text="@string/onboarding_set_as_default_text"/>
+        android:text="@string/onboarding_set_as_default_text" />
 
 </RelativeLayout>

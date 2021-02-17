@@ -20,4 +20,13 @@
         <attr name="secondaryImageSrc" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="IteoraFirstRunControllerSimple">
+        <attr name="simpleActionButtonText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="IteoraFirstRunControllerAdvanced">
+        <attr name="advancedActionButtonText" format="string"/>
+        <attr name="skipButtonText" format="string"/>
+    </declare-styleable>
+
 </resources>

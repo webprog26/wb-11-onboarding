@@ -1,9 +1,10 @@
 package com.example.wb_11onboarding;
 
-import android.text.Html;
 import android.view.View;
 
 public class IteoraOnBoardingInviteFragment extends IteoraAbstractOnBoardingFragment {
+
+    private IteoraFirstRunControllerAdvanced controllerAdvanced;
 
     @Override
     protected int getLayoutRes() {
@@ -12,12 +13,12 @@ public class IteoraOnBoardingInviteFragment extends IteoraAbstractOnBoardingFrag
 
     @Override
     protected int getViewNextId() {
-        return R.id.btn_skip;
+        return controllerAdvanced.getSkipButtonId();
     }
 
     @Override
     protected int getViewPrimaryActionId() {
-        return R.id.btn_action;
+        return controllerAdvanced.getActionButtonId();
     }
 
     @Override
@@ -27,6 +28,8 @@ public class IteoraOnBoardingInviteFragment extends IteoraAbstractOnBoardingFrag
 
     @Override
     protected void onViewCreatedInternal(View view) {
-        ((IteoraFirstRunView) view.findViewById(R.id.iteora_first_run_view)).setTitle(Html.fromHtml(getString(R.string.onboarding_invite_title)));
+        ((IteoraFirstRunView) view.findViewById(R.id.iteora_first_run_view)).setTitle(parseHtmlString(R.string.onboarding_invite_title));
+
+        this.controllerAdvanced = (IteoraFirstRunControllerAdvanced) view.findViewById(R.id.controls_container);
     }
 }

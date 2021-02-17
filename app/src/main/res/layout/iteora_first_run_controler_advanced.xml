@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/btn_action"
+        style="@style/OnboardingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_btn_agree_text" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_run_slide_controls_divider_height" />
+
+    <Button
+        android:id="@+id/btn_skip"
+        style="@style/OnboardingSkipButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_run_slide_controls_skip_view_height"
+        android:text="@string/onboarding_btn_skip_text" />
+</merge>

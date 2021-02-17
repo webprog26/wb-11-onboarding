@@ -6,7 +6,7 @@
         style="@style/OnboardingTitleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp" />
+        android:layout_marginBottom="@dimen/first_run_view_title_margin_bottom" />
 
     <TextView
         android:id="@+id/tv_text"

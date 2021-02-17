@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".IteoraOnBoardingActivity"
-    android:paddingBottom="16dp">
+    android:paddingBottom="@dimen/first_run_iteora_activity_padding_bottom">
 
     <LinearLayout
         android:id="@+id/pages_number_container"

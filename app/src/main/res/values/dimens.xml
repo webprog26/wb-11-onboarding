@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="first_run_iteora_activity_padding_bottom">16dp</dimen>
+
+    <dimen name="first_run_slide_padding_start">22dp</dimen>
+    <dimen name="first_run_slide_padding_top">48dp</dimen>
+    <dimen name="first_run_slide_padding_end">22dp</dimen>
+    <dimen name="first_run_slide_padding_bottom">22dp</dimen>
+
+    <dimen name="first_run_slide_controls_margin_bottom">16dp</dimen>
+
+    <dimen name="first_run_slide_controls_divider_height">8dp</dimen>
+
+    <dimen name="first_run_slide_controls_skip_view_height">40dp</dimen>
+
+    <dimen name="first_run_view_image_margin_bottom">12dp</dimen>
+    <dimen name="first_run_view_title_margin_bottom">18dp</dimen>
+
+
+</resources>
