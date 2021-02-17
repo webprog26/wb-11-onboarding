@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="IteoraAbstractFirstRunView">
+    <declare-styleable name="IteoraFirstRunView">
         <attr name="android:src"/>
         <attr name="android:text"/>
-        <attr name="title" format="string"/>
+        <attr name="firstRunViewTitle" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="IteoraFirstRunViewAdvanced">
+        <attr name="android:text"/>
+        <attr name="firstRunViewTitleAdvanced" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="IteoraSelectableFirstRunImageView">

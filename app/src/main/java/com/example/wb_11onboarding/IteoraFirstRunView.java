@@ -24,22 +24,22 @@ public class IteoraFirstRunView extends IteoraAbstractFirstRunView {
         this.tvText = rootView.findViewById(R.id.tv_text);
 
         if (attrs != null) {
-            final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.IteoraAbstractFirstRunView, 0, 0);
+            final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.IteoraFirstRunView, 0, 0);
 
             try {
-                final int titleResId = ta.getResourceId(R.styleable.IteoraAbstractFirstRunView_title, 0);
+                final int titleResId = ta.getResourceId(R.styleable.IteoraFirstRunView_firstRunViewTitle, 0);
 
                 if (titleResId != 0) {
                     tvTitle.setText(titleResId);
                 }
 
-                final int textResId = ta.getResourceId(R.styleable.IteoraAbstractFirstRunView_android_text, 0);
+                final int textResId = ta.getResourceId(R.styleable.IteoraFirstRunView_android_text, 0);
 
                 if (textResId != 0) {
                     tvText.setText(textResId);
                 }
 
-                final int imageDrawableResId = ta.getResourceId(R.styleable.IteoraAbstractFirstRunView_android_src, 0);
+                final int imageDrawableResId = ta.getResourceId(R.styleable.IteoraFirstRunView_android_src, 0);
 
                 if (imageDrawableResId != 0) {
                     ((ImageView) rootView.findViewById(R.id.iv_image)).setImageDrawable(ContextCompat.getDrawable(getContext(), imageDrawableResId));

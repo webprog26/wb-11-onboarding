@@ -31,16 +31,16 @@ public class IteoraFirstRunViewAdvanced extends IteoraAbstractFirstRunView {
         this.selectableView = (IteoraFirstRunSelectableView) rootView.findViewById(R.id.iteora_first_run_selectable_view);
 
         if (attrs != null) {
-            final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.IteoraAbstractFirstRunView, 0, 0);
+            final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.IteoraFirstRunViewAdvanced, 0, 0);
 
             try {
-                final int titleResId = ta.getResourceId(R.styleable.IteoraAbstractFirstRunView_title, 0);
+                final int titleResId = ta.getResourceId(R.styleable.IteoraFirstRunViewAdvanced_firstRunViewTitleAdvanced, 0);
 
                 if (titleResId != 0) {
                     tvTitle.setText(titleResId);
                 }
 
-                final int textResId = ta.getResourceId(R.styleable.IteoraAbstractFirstRunView_android_text, 0);
+                final int textResId = ta.getResourceId(R.styleable.IteoraFirstRunViewAdvanced_android_text, 0);
 
                 if (textResId != 0) {
                     tvText.setText(textResId);
