@@ -5,4 +5,8 @@
         <attr name="android:text"/>
         <attr name="title" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="IteoraSelectableFirstRunImageView">
+        <attr name="android:src"/>
+    </declare-styleable>
 </resources>
