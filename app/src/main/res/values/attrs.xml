@@ -9,4 +9,9 @@
     <declare-styleable name="IteoraSelectableFirstRunImageView">
         <attr name="android:src"/>
     </declare-styleable>
+
+    <declare-styleable name="IteoraFirstRunSelectableView">
+        <attr name="primaryImageSrc" format="integer"/>
+        <attr name="secondaryImageSrc" format="integer"/>
+    </declare-styleable>
 </resources>

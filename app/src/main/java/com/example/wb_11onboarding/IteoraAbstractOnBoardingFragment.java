@@ -26,7 +26,7 @@ public abstract class IteoraAbstractOnBoardingFragment extends Fragment implemen
     private IteoraOnBoardingCallback callback;
 
     @Override
-    public void onAttach(Context context) {
+    public final void onAttach(Context context) {
         super.onAttach(context);
         super.onAttach(context);
         if (context instanceof IteoraOnBoardingCallback) {
@@ -36,13 +36,14 @@ public abstract class IteoraAbstractOnBoardingFragment extends Fragment implemen
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(getLayoutRes(), container, false);
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public final void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        onViewCreatedInternal(view);
 
         if (callback != null) {
             final int vNextId = getViewNextId();
@@ -74,7 +75,6 @@ public abstract class IteoraAbstractOnBoardingFragment extends Fragment implemen
                 }
             }
         }
-        onViewCreatedInternal(view);
     }
 
     @Override

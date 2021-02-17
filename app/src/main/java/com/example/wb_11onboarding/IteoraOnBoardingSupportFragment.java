@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFragment {
 
+    private IteoraFirstRunSelectableView firstRunSelectableView;
+
     @Override
     protected int getLayoutRes() {
         return R.layout.onboarding_support_fragment;
@@ -18,7 +20,7 @@ public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFra
 
     @Override
     protected int getViewPrimaryActionId() {
-        return R.id.v_support_wild_life;
+        return firstRunSelectableView.getPrimaryActionId();
     }
 
     @Override
@@ -28,7 +30,7 @@ public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFra
 
     @Override
     protected int getViewSecondaryActionId() {
-        return R.id.v_support_ocean_life;
+        return firstRunSelectableView.getSecondaryActionId();
     }
 
     @Override
@@ -39,6 +41,7 @@ public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFra
     @Override
     protected void onViewCreatedInternal(View view) {
         ((TextView) view.findViewById(R.id.tv_support_title)).setText(Html.fromHtml(getString(R.string.onboarding_support_title)));
+        this.firstRunSelectableView = (IteoraFirstRunSelectableView) view.findViewById(R.id.iteora_first_run_selectable_view);
     }
 
     @Override
@@ -50,4 +53,6 @@ public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFra
     protected int getViewInactiveBackground() {
         return R.drawable.onboarding_support_item_inactive;
     }
+
+
 }

@@ -47,4 +47,8 @@ public class IteoraSelectableFirstRunImageView extends FrameLayout {
             }
         }
     }
+
+    void setImage(final int imageRes) {
+        ivImage.setImageDrawable(ContextCompat.getDrawable(getContext(), imageRes));
+    }
 }

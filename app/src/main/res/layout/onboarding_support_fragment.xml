@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="22dp">
 
     <LinearLayout
@@ -21,7 +22,7 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/controls_container"
@@ -39,30 +40,15 @@
             style="@style/OnboardingText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_support_title"
             android:text="@string/onboarding_support_text" />
 
-        <LinearLayout
+        <com.example.wb_11onboarding.IteoraFirstRunSelectableView
+            android:id="@+id/iteora_first_run_selectable_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/support_text"
-            android:gravity="center_vertical|center_horizontal"
-            android:orientation="vertical">
+            app:primaryImageSrc="@drawable/onboarding_support_wild_life"
+            app:secondaryImageSrc="@drawable/onboarding_support_ocean_life"/>
 
-            <com.example.wb_11onboarding.IteoraSelectableFirstRunImageView
-                android:id="@+id/v_support_wild_life"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/onboarding_support_wild_life"/>
-
-            <com.example.wb_11onboarding.IteoraSelectableFirstRunImageView
-                android:id="@+id/v_support_ocean_life"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/onboarding_support_ocean_life"/>
-
-        </LinearLayout>
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>
