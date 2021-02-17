@@ -3,25 +3,32 @@ package com.example.wb_11onboarding;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-public class IteoraFirstRunView extends IteoraAbstractFirstRunView {
+public class IteoraFirstRunViewAdvanced extends IteoraAbstractFirstRunView {
 
     private TextView tvTitle;
     private TextView tvText;
 
-    public IteoraFirstRunView(Context context, @Nullable AttributeSet attrs) {
+    private IteoraFirstRunSelectableView selectableView;
+
+    public IteoraFirstRunViewAdvanced(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    @Override
+    protected int getLayoutResId() {
+        return R.layout.iteora_first_run_view_advanced;
     }
 
     @Override
     protected void onPostInit(View rootView, @Nullable AttributeSet attrs) {
         this.tvTitle = rootView.findViewById(R.id.tv_title);
         this.tvText = rootView.findViewById(R.id.tv_text);
+
+        this.selectableView = (IteoraFirstRunSelectableView) rootView.findViewById(R.id.iteora_first_run_selectable_view);
 
         if (attrs != null) {
             final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.IteoraAbstractFirstRunView, 0, 0);
@@ -39,21 +46,14 @@ public class IteoraFirstRunView extends IteoraAbstractFirstRunView {
                     tvText.setText(textResId);
                 }
 
-                final int imageDrawableResId = ta.getResourceId(R.styleable.IteoraAbstractFirstRunView_android_src, 0);
-
-                if (imageDrawableResId != 0) {
-                    ((ImageView) rootView.findViewById(R.id.iv_image)).setImageDrawable(ContextCompat.getDrawable(getContext(), imageDrawableResId));
-                }
-
             } finally {
                 ta.recycle();
             }
         }
     }
 
-    @Override
-    protected int getLayoutResId() {
-        return R.layout.iteora_first_run_view;
+    public IteoraFirstRunSelectableView getSelectableView() {
+        return selectableView;
     }
 
     public void setTitle(final CharSequence title) {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/OnboardingTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        style="@style/OnboardingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_support_text" />
+
+    <com.example.wb_11onboarding.IteoraFirstRunSelectableView
+        android:id="@+id/iteora_first_run_selectable_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:primaryImageSrc="@drawable/onboarding_support_wild_life"
+        app:secondaryImageSrc="@drawable/onboarding_support_ocean_life"/>
+</merge>

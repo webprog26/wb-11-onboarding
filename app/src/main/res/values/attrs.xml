@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="IteoraFirstRunView">
+    <declare-styleable name="IteoraAbstractFirstRunView">
         <attr name="android:src"/>
         <attr name="android:text"/>
         <attr name="title" format="string"/>
@@ -14,4 +14,5 @@
         <attr name="primaryImageSrc" format="integer"/>
         <attr name="secondaryImageSrc" format="integer"/>
     </declare-styleable>
+
 </resources>

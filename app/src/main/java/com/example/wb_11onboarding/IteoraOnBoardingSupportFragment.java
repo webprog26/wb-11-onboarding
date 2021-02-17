@@ -2,11 +2,10 @@ package com.example.wb_11onboarding;
 
 import android.text.Html;
 import android.view.View;
-import android.widget.TextView;
 
 public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFragment {
 
-    private IteoraFirstRunSelectableView firstRunSelectableView;
+    private IteoraFirstRunViewAdvanced firstRunViewAdvanced;
 
     @Override
     protected int getLayoutRes() {
@@ -20,7 +19,7 @@ public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFra
 
     @Override
     protected int getViewPrimaryActionId() {
-        return firstRunSelectableView.getPrimaryActionId();
+        return firstRunViewAdvanced.getSelectableView().getPrimaryActionId();
     }
 
     @Override
@@ -30,7 +29,7 @@ public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFra
 
     @Override
     protected int getViewSecondaryActionId() {
-        return firstRunSelectableView.getSecondaryActionId();
+        return firstRunViewAdvanced.getSelectableView().getSecondaryActionId();
     }
 
     @Override
@@ -40,8 +39,8 @@ public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFra
 
     @Override
     protected void onViewCreatedInternal(View view) {
-        ((TextView) view.findViewById(R.id.tv_support_title)).setText(Html.fromHtml(getString(R.string.onboarding_support_title)));
-        this.firstRunSelectableView = (IteoraFirstRunSelectableView) view.findViewById(R.id.iteora_first_run_selectable_view);
+        this.firstRunViewAdvanced = (IteoraFirstRunViewAdvanced) view.findViewById(R.id.iteora_first_run_view_advanced);
+        firstRunViewAdvanced.setTitle(Html.fromHtml(getString(R.string.onboarding_support_title)));
     }
 
     @Override
@@ -53,6 +52,4 @@ public class IteoraOnBoardingSupportFragment extends IteoraAbstractOnBoardingFra
     protected int getViewInactiveBackground() {
         return R.drawable.onboarding_support_item_inactive;
     }
-
-
 }
