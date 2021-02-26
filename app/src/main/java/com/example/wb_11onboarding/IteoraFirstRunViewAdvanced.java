@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class IteoraFirstRunViewAdvanced extends IteoraAbstractFirstRunView {
@@ -25,6 +26,8 @@ public class IteoraFirstRunViewAdvanced extends IteoraAbstractFirstRunView {
 
     @Override
     protected void onPostInit(View rootView, @Nullable AttributeSet attrs) {
+        final int VERTICAL_PADDING = (int) getResources().getDimension(R.dimen.first_run_view_advanced_vertical_padding);
+        setPadding(0, VERTICAL_PADDING, 0, VERTICAL_PADDING);
         this.tvTitle = rootView.findViewById(R.id.tv_title);
         this.tvText = rootView.findViewById(R.id.tv_text);
 

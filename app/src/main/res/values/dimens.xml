@@ -2,19 +2,31 @@
 <resources>
     <dimen name="first_run_iteora_activity_padding_bottom">16dp</dimen>
 
-    <dimen name="first_run_slide_padding_start">22dp</dimen>
-    <dimen name="first_run_slide_padding_top">48dp</dimen>
-    <dimen name="first_run_slide_padding_end">22dp</dimen>
-    <dimen name="first_run_slide_padding_bottom">22dp</dimen>
+    <dimen name="first_run_slide_controls_margin_bottom">0dp</dimen>
 
-    <dimen name="first_run_slide_controls_margin_bottom">16dp</dimen>
+    <dimen name="first_run_slide_controls_divider_height">16dp</dimen>
 
-    <dimen name="first_run_slide_controls_divider_height">8dp</dimen>
+    <dimen name="first_run_slide_control_view_height">36dp</dimen>
 
-    <dimen name="first_run_slide_controls_skip_view_height">40dp</dimen>
-
-    <dimen name="first_run_view_image_margin_bottom">12dp</dimen>
+    <dimen name="first_run_view_image_margin_bottom">18dp</dimen>
     <dimen name="first_run_view_title_margin_bottom">18dp</dimen>
 
+    <dimen name="first_run_selectable_image_view_padding">10dp</dimen>
 
+    <dimen name="first_run_iteora_activity_padding_top">28dp</dimen>
+    <dimen name="first_run_iteora_activity_horizontal_padding">22dp</dimen>
+    <dimen name="first_run_slides_margin_bottom">16dp</dimen>
+
+    <dimen name="first_run_view_advanced_vertical_padding">24dp</dimen>
+    <dimen name="first_run_selectable_view_margin_top">14dp</dimen>
+
+    <dimen name="first_run_selectable_image_view_margin_top">4dp</dimen>
+    <dimen name="first_run_selectable_image_view_margin_bottom">4dp</dimen>
+
+
+    <dimen name="first_run_large_text_size">30sp</dimen>
+    <dimen name="first_run_medium_text_size">20sp</dimen>
+    <dimen name="first_run_small_text_size">14sp</dimen>
+
+    <dimen name="first_run_page_number_pdding_bottom">24dp</dimen>
 </resources>

@@ -22,7 +22,6 @@ public class IteoraFirstRunView extends IteoraAbstractFirstRunView {
     protected void onPostInit(View rootView, @Nullable AttributeSet attrs) {
         this.tvTitle = rootView.findViewById(R.id.tv_title);
         this.tvText = rootView.findViewById(R.id.tv_text);
-
         if (attrs != null) {
             final TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.IteoraFirstRunView, 0, 0);
 

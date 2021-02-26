@@ -14,11 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/first_run_view_title_margin_bottom"
-        style="@style/OnboardingTitleText"/>
+        style="@style/FirstRunTitleText" />
 
     <TextView
         android:id="@+id/tv_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/OnboardingText" />
+        style="@style/FirstRunTextSmall" />
 </merge>

@@ -1,6 +1,7 @@
 package com.example.wb_11onboarding;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public abstract class IteoraAbstractOnBoardingFragment extends Fragment implements View.OnClickListener {
 
@@ -60,7 +62,6 @@ public abstract class IteoraAbstractOnBoardingFragment extends Fragment implemen
 
             final int vPrimaryActionId = getViewPrimaryActionId();
             final int vSecondaryActionId = getViewSecondaryActionId();
-
 
             if (vPrimaryActionId != NO_VIEW_ACTION_FOUND) {
                 vPrimaryAction = view.findViewById(vPrimaryActionId);
@@ -115,7 +116,7 @@ public abstract class IteoraAbstractOnBoardingFragment extends Fragment implemen
     }
 
     private void maybeManageActionViewsBackground(final int id) {
-        if (vPrimaryAction != null && vSecondaryAction != null) {
+        if (vPrimaryAction instanceof IteoraSelectableFirstRunImageView && vSecondaryAction instanceof IteoraSelectableFirstRunImageView) {
             final Context context = getContext();
             if (context != null) {
                 final int viewActiveBackground = getViewActiveBackground();
@@ -123,17 +124,18 @@ public abstract class IteoraAbstractOnBoardingFragment extends Fragment implemen
                 if (viewActiveBackground != NO_VIEW_ACTIVE_BACKGROUND_FOUND && viewInactiveBackground != NO_VIEW_INACTIVE_BACKGROUND_FOUND) {
                     if (vPrimaryAction.getId() == id) {
                         if (isViewSelected(vPrimaryAction.getTag())) {
-                            vPrimaryAction.setBackground(ContextCompat.getDrawable(context, getViewActiveBackground()));
-                            vSecondaryAction.setBackground(ContextCompat.getDrawable(context, getViewInactiveBackground()));
+                            ((IteoraSelectableFirstRunImageView) vPrimaryAction).onViewSelected();
+                            ((IteoraSelectableFirstRunImageView) vSecondaryAction).onViewDeselected();
+
                         } else {
-                            vPrimaryAction.setBackground(ContextCompat.getDrawable(context, getViewInactiveBackground()));
+                            ((IteoraSelectableFirstRunImageView) vPrimaryAction).onViewDeselected();
                         }
                     } else if (vSecondaryAction.getId() == id) {
                         if (isViewSelected(vSecondaryAction.getTag())) {
-                            vSecondaryAction.setBackground(ContextCompat.getDrawable(context, getViewActiveBackground()));
-                            vPrimaryAction.setBackground(ContextCompat.getDrawable(context, getViewInactiveBackground()));
+                            ((IteoraSelectableFirstRunImageView) vSecondaryAction).onViewSelected();
+                            ((IteoraSelectableFirstRunImageView) vPrimaryAction).onViewDeselected();
                         } else {
-                            vSecondaryAction.setBackground(ContextCompat.getDrawable(context, getViewInactiveBackground()));
+                            ((IteoraSelectableFirstRunImageView) vSecondaryAction).onViewDeselected();
                         }
                     }
                 }

@@ -5,6 +5,17 @@
         android:id="@+id/btn_action"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/OnboardingActionButton"/>
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        style="@style/OnboardingActionButton" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_run_slide_controls_divider_height" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_run_slide_control_view_height"
+        android:visibility="invisible" />
 
 </merge>

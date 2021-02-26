@@ -2,7 +2,9 @@ package com.example.wb_11onboarding;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -54,5 +56,22 @@ public class IteoraFirstRunSelectableView extends IteoraAbstractFirstRunView {
 
     int getSecondaryActionId() {
         return secondarySelectableImageView.getId();
+    }
+
+    void onViewSelected(int id) {
+        if (id == primarySelectableImageView.getId()) {
+            primarySelectableImageView.onViewSelected();
+        } else {
+            secondarySelectableImageView.onViewSelected();
+        }
+
+    }
+
+    void onViewDeselected(int id) {
+        if (id == primarySelectableImageView.getId()) {
+            primarySelectableImageView.onViewDeselected();
+        } else {
+            secondarySelectableImageView.onViewDeselected();
+        }
     }
 }

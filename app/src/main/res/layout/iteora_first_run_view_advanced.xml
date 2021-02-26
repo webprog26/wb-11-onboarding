@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
         android:id="@+id/tv_title"
-        style="@style/OnboardingTitleText"
+        style="@style/FirstRunTitleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/first_run_view_title_margin_bottom" />
 
     <TextView
         android:id="@+id/tv_text"
-        style="@style/OnboardingText"
+        style="@style/FirstRunTextSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/onboarding_support_text" />
@@ -19,6 +19,7 @@
         android:id="@+id/iteora_first_run_selectable_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/first_run_selectable_view_margin_top"
         app:primaryImageSrc="@drawable/onboarding_support_wild_life"
         app:secondaryImageSrc="@drawable/onboarding_support_ocean_life"/>
 </merge>

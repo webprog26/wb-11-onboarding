@@ -2,11 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingStart="@dimen/first_run_slide_padding_start"
-    android:paddingTop="@dimen/first_run_slide_padding_top"
-    android:paddingEnd="@dimen/first_run_slide_padding_end"
-    android:paddingBottom="@dimen/first_run_slide_padding_bottom">
+    android:layout_height="match_parent">
 
     <com.example.wb_11onboarding.IteoraFirstRunControllerAdvanced
         android:id="@+id/controls_container"

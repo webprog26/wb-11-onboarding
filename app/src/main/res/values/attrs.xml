@@ -13,6 +13,7 @@
 
     <declare-styleable name="IteoraSelectableFirstRunImageView">
         <attr name="android:src"/>
+        <attr name="android:text" />
     </declare-styleable>
 
     <declare-styleable name="IteoraFirstRunSelectableView">

@@ -22,4 +22,6 @@
 
     <string name="onboarding_support_title"><![CDATA[<font color="#363d47">Choose Who </font><font color=#0080ff>You<br> Would Like to Support</font>]]></string>
     <string name="onboarding_support_text">By default all profits are donated equally among animal support funds.  However, if you prefer you can decide to whom to address help:</string>
+    <string name="first_run_support_wild_animals">Wild animals</string>
+    <string name="first_run_support_ocean_life">Ocean life</string>
 </resources>
