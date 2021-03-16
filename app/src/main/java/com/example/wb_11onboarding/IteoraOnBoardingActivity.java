@@ -1,15 +1,20 @@
 package com.example.wb_11onboarding;
 
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 public class IteoraOnBoardingActivity extends AppCompatActivity implements IteoraOnBoardingCallback {
@@ -22,6 +27,21 @@ public class IteoraOnBoardingActivity extends AppCompatActivity implements Iteor
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            final Window window = getWindow();
+
+// clear FLAG_TRANSLUCENT_STATUS flag:
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+// finally change the color
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorAccent));
+            getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorAccent));
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iteora_onboarding);
 
